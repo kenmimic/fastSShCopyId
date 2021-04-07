@@ -1,4 +1,4 @@
 *.rsa
 *.rsa.pub
-fast_id_rsa
-fast_id_rsa.pub
+*_id_rsa
+*_id_rsa.pub
