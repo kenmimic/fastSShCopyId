@@ -1,5 +1,9 @@
 # fastSShCopyId
 
+Reqirement: paramiko 
+
+pip3 install paramiko
+
 use: python3 fastSShCopyId.py -u username -s hosts
 
 hosts:
