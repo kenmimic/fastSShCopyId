@@ -53,7 +53,7 @@ def fastSshCopyId():
     client.connect(instance, username=args.username, password=str(args.password))
     
     MyPubKey = getPubKey() 
-    stdin, stdout, stderr = client.exec_command('echo "{}" >> ~/.ssh/authorized_keys'.format(MyPubKey))
+    stdin, stdout, stderr = client.exec_command('mkdir ~/.ssh && echo "{}" >> ~/.ssh/authorized_keys'.format(MyPubKey))
     
     # list all keys
     #stdin, stdout, stderr = client.exec_command('cat  ~/.ssh/authorized_keys')
