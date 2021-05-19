@@ -1,0 +1,18 @@
+# .ssh/config template
+# place this file in ~/.ssh/
+# Host can be whatever you want like /etc/hosts
+
+Host=BastionServer
+    HostName=$IP or $HOSTNAME
+    Port=$port
+    User=$Username
+    IdentityFile=~/.ssh/id_rsa
+    ForwardAgent=yes
+
+Host=InsideClusterInstance
+    HostName=$IP or $HOSTNAME
+    Port=$port
+    User=$Username
+    IdentityFile=~/.ssh/id_rsa
+    ProxyCommand=ssh -A BastionServer -W %h:%p
+    StrictHostKeyChecking=no
